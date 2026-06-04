@@ -9,11 +9,21 @@
 
 \maketitle
 
+Note: There are definitely better ways to do some of these problems. I wrote them out in a complicated manner, sometimes reiterating basic/obvious truths, to make sure I didn't trick myself into understanding something that I actually didn't.
+
 \section{Brainteasers}
 
 \textbf{Tigers \& Sheep}: 100 tigers and 1 sheep are placed on a barren island. If a tiger eats the sheep, it transforms into a sheep. All tigers are perfectly rational and aim to: (1) stay alive, and (2) eat the sheep if it’s safe to do so. Given these conditions, will the sheep be eaten?
 \\
 \textbf{Answer:} 
+
+A tiger will only eat the sheep if it can guarantee that it, itself, will not be eaten. So, a tiger will only decide to eat the sheep in this case if when there are 99 tigers, no tiger decides to eat the sheep. And a tiger will only choose to eat the sheep when there are 99 tigers if, when there are 98, no tiger chooses to eat the sheep, and so on. So, we must reason inductively upwards from the number of tigers; let that be $n$. When $n=1$, it's safe to eat the sheep since no other tigers exist. When $n=2$, it's not safe as if a tiger eats, the other one will eat it. When $n=3$, it is safe, because if a tiger eats then it reduces to the $n=2$ case. So, for any $n$  that is safe, the $n+1$th iteration is not safe as we add a last tiger to finish off the additional sheep. Conversely, for any $n$ that isn't safe, the $n+1$th must be safe because we add another tiger to remove the tiger finishing off the sheep (and thus it will never finish it off). This means we alternate between safe and unsafe, and since $n=1$ is safe, all odd numbers are safe for the tigers (i.e. sheep gets eaten) and all even numbers aren't safe. Consequently, when $n=100$, the sheep will not get eaten.
+\\\\
+\textbf{Hopping Rabbit}: A rabbit sits at the bottom of a staircase with $n$ stairs. The rabbit can hop up only one or two stairs at a time. How many different ways are there for the rabbit to ascend to the top of the stairs?
+\\
+\textbf{Answer:}
+
+
 
 
 \end{document}
