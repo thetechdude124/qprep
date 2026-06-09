@@ -23,7 +23,7 @@ A tiger will only eat the sheep if it can guarantee that it, itself, will not be
 \\
 \textbf{Answer:}
 
-
+The key to solving in problem lies in thinking inductively. Since we can only take one or two steps at a time, to get to the $n$ step, we can either start from the $n-1$th stair and take a single step, or start from the $n-2$th stair and take a double step (observe that we could also have taken two single-steps, but after we take the first of these steps, we're actually at the $n-1$th step, which double counts the total number of ways). So, there is one way to get from the $n-1$th step to the $n$th step, and  total number of ways to get to the $n$th step is the same as the number of ways to get to the $n-2$th step plus the number of ways to get to the $n-1$th step. This is true inductively. So, if we let $f(n)$ be the number of ways to climb $n$ steps, then $f(n) = f(n-1) + f(n-2)$, which is the same recurrence as the Fibonacci sequence!
 
 
 \end{document}
